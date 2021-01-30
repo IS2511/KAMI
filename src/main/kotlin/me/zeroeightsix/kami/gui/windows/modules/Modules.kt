@@ -7,7 +7,7 @@ import imgui.ImGui.acceptDragDropPayload
 import imgui.ImGui.collapsingHeader
 import imgui.ImGui.currentWindow
 import imgui.ImGui.isItemClicked
-import imgui.ImGui.openPopupContextItem
+import imgui.ImGui.openPopupOnItemClick
 import imgui.ImGui.selectable
 import imgui.ImGui.treeNodeBehaviorIsOpen
 import imgui.ImGui.treeNodeEx
@@ -97,7 +97,7 @@ object Modules {
             if (selectable(module.name, module.enabled)) {
                 module.enabled = !module.enabled
             }
-            openPopupContextItem("module-settings-${module.name}", MouseButton.Right.i)
+            openPopupOnItemClick("module-settings-${module.name}", MouseButton.Right.i)
             popup("module-settings-${module.name}") {
                 showModuleSettings(module)
             }
@@ -270,7 +270,7 @@ private fun showModuleSettings(module: Module) {
 
     if (!Settings.hideModuleDescriptions) {
         ImGui.pushStyleColor(Col.Text, Vec4(.7f, .7f, .7f, 1f))
-        ImGui.text("%s", module.description)
+        ImGui.text(module.description)
         ImGui.popStyleColor()
     }
 
