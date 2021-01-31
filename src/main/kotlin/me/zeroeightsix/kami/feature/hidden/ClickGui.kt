@@ -26,11 +26,17 @@ object ClickGui : Feature, Listenable, HasBind {
     @Setting
     override var bind: Bind = Bind(false, false, false, Bind.Code(InputUtil.fromTranslationKey("key.keyboard.y")))
 
+    // MODIFIED
+    private var bindLeftAlt: Bind = Bind(false, false, false, Bind.Code(InputUtil.fromTranslationKey("key.keyboard.left.alt")))
+
     @EventHandler
     val bindListener = Listener(
         EventHook<BindEvent> {
             bind.update(it.key, it.scancode, it.pressed)
-            if (bind.isDown && (it.ingame || (Settings.openGuiAnywhere && mc.currentScreen?.expectingInput != true))) {
+            if (Settings.bindClickGuiLeftAlt) { // MODIFIED
+                bindLeftAlt.update(it.key, it.scancode, it.pressed)
+            } // MODIFIED
+            if ((bind.isDown || bindLeftAlt.isDown) && (it.ingame || (Settings.openGuiAnywhere && mc.currentScreen?.expectingInput != true))) {
                 KamiHud // In case imgui was not yet initialised, it gets initialised here. (Kotlin `init` block)
                 mc.openScreen(KamiGuiScreen(mc.currentScreen))
                 it.cancel()

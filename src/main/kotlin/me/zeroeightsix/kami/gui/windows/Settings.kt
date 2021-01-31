@@ -60,6 +60,9 @@ object Settings {
     @Setting
     var hideModuleDescriptions = false
 
+    @Setting // MODIFIED
+    var bindClickGuiLeftAlt = true
+
     @Setting
     var openGuiAnywhere = false
 
@@ -151,6 +154,12 @@ object Settings {
                             "Hide descriptions",
                             ::hideModuleDescriptions,
                             "Hide module descriptions when its settings are opened."
+                        )
+                        boolSetting( // MODIFIED
+                            "ClickGui on left-alt",
+                            ::bindClickGuiLeftAlt,
+                            "Tired of broken config reader, this is my fix\n" +
+                                "(bug: key.keyboard.left.alt -> key.keyboard.unknown)"
                         )
                         dummy(Vec2(0, 5))
                         if (button("Reset module windows")) {
