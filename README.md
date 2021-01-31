@@ -2,8 +2,13 @@
 This repo is a fork with some of my modifications.
 Probably no major development will be done here.
 
-[![Build](https://github.com/IS2511/KAMI/workflows/fabric_jar-build/badge.svg)](https://github.com/IS2511/KAMI/actions)
-[![Issues](https://img.shields.io/github/issues/IS2511/kami.svg)](https://github.com/IS2511/kami/issues)
+[![Build](https://github.com/IS2511/KAMI/workflows/fabric_jar-build/badge.svg)](https://github.com/IS2511/KAMI/actions?query=workflow%3Afabric_jar-build)
+
+### Downloading (fork)
+
+Most recent build: [Actions](https://github.com/IS2511/KAMI/actions?query=workflow%3Afabric_jar-build)
+
+"Stable" build: [Releases](https://github.com/IS2511/KAMI/releases)
 
 ## \\/ Original text below \\/
 
