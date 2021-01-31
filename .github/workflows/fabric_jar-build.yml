@@ -40,10 +40,13 @@ jobs:
       - name: Build using gradle
         run: ./gradlew --build-cache build
 
-      - uses: actions/upload-artifact@v2
-        with:
-          name: KAMI default jar
-          path: "./build/libs/KAMI-*${{ github.repository_owner }}.jar"
+#      - uses: actions/upload-artifact@v2
+#        with:
+#          path: |
+#            build/libs/KAMI-*${{ github.repository_owner }}.jar
+#            !build/libs/KAMI-*${{ github.repository_owner }}-sources.jar
+#            !build/libs/KAMI-*${{ github.repository_owner }}-sources-dev.jar
+
 
       - uses: actions/upload-artifact@v2
         with:
