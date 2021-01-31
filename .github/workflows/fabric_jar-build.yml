@@ -43,7 +43,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: KAMI default jar
-          path: "./build/libs/KAMI-*${{ github.repository_owner }}"
+          path: "./build/libs/KAMI-*${{ github.repository_owner }}.jar"
 
       - uses: actions/upload-artifact@v2
         with:
