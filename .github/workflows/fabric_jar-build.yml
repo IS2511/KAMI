@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: Fabric mod jar build
+name: fabric_jar-build
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the fabric branch
@@ -39,6 +39,11 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build using gradle
         run: ./gradlew --build-cache build
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: KAMI default jar
+          path: "./build/libs/KAMI-*${{ github.repository_owner }}"
 
       - uses: actions/upload-artifact@v2
         with:

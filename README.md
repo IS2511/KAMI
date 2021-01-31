@@ -1,4 +1,14 @@
+# This is a fork
+This repo is a fork with some of my modifications.
+Probably no major development will be done here.
+
+[![Build](https://github.com/IS2511/KAMI/workflows/fabric_jar-build/badge.svg)](https://github.com/IS2511/KAMI/actions)
+[![Issues](https://img.shields.io/github/issues/IS2511/kami.svg)](https://github.com/IS2511/kami/issues)
+
+## \\/ Original text below \\/
+
 # KAMI
+
 [![Build](https://github.com/zeroeightysix/KAMI/workflows/Fabric%20mod%20jar%20build/badge.svg)](https://github.com/zeroeightysix/KAMI/actions)
 [![Issues](https://img.shields.io/github/issues/zeroeightysix/kami.svg)](https://github.com/zeroeightysix/kami/issues)
 [![Discord](https://img.shields.io/badge/chat-on%20discord-brightgreen.svg)](http://discord.gg/9hvwgeg)
@@ -33,7 +43,7 @@ While ingame, press <kbd>Y</kbd> to open the GUI. The wizard will help you furth
 The command prefix is `.` by default. The autocompletion will list what commands are available.
 
 ## Troubleshooting
-If you encounter bugs or crashes, please [open a new issue](../../issues/new/choose).
+If you encounter bugs or crashes, please [open a new issue](https://github.com/zeroeightysix/KAMI/issues/new/choose).
 
 To ask for help, join the [Discord](http://discord.gg/9hvwgeg).
 
